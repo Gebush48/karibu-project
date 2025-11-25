@@ -6,161 +6,155 @@
     <link rel="stylesheet" href="css/procurement.css" />
   </head>
   <body>
-    <div class="app-root">
-      <div class="layout-container">
-        <main class="content">
-          <div class="form-header">
-            <p class="form-title">Procurement Entry Form</p>
+    <div class="layout-container">
+      <main class="content">
+        <div class="form-header">
+          <p class="form-title">Procurement Entry Form</p>
+        </div>
+
+        <form class="procurement-form">
+          <div class="form-group">
+            <label
+              >Supplier Name
+              <input
+                type="text"
+                class="input"
+                placeholder="Enter supplier name"
+              />
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Supplier Contact
+              <input
+                type="text"
+                class="input"
+                placeholder="Enter supplier contact"
+              />
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Purchase Date
+              <input type="date" class="input" />
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Invoice Number
+              <input
+                type="text"
+                class="input"
+                placeholder="Enter invoice number"
+              />
+            </label>
           </div>
 
-          <form class="procurement-form">
-            <div class="form-group">
-              <label
-                >Supplier Name
-                <input
-                  type="text"
-                  class="input"
-                  placeholder="Enter supplier name"
-                />
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Supplier Contact
-                <input
-                  type="text"
-                  class="input"
-                  placeholder="Enter supplier contact"
-                />
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Purchase Date
-                <input type="date" class="input" />
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Invoice Number
-                <input
-                  type="text"
-                  class="input"
-                  placeholder="Enter invoice number"
-                />
-              </label>
-            </div>
+          <div class="form-group">
+            <label
+              >Product Name
+              <input
+                type="text"
+                class="input"
+                placeholder="Enter product name"
+              />
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Product Category
+              <select class="select">
+                <option>Select category</option>
+                <option>two</option>
+                <option>three</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Quantity
+              <input type="number" class="input" placeholder="Enter quantity" />
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Unit Price
+              <input
+                type="number"
+                class="input"
+                placeholder="Enter unit price"
+              />
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Total Amount
+              <input type="number" class="input" />
+            </label>
+          </div>
 
-            <div class="form-group">
-              <label
-                >Product Name
-                <input
-                  type="text"
-                  class="input"
-                  placeholder="Enter product name"
-                />
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Product Category
-                <select class="select">
-                  <option>Select category</option>
-                  <option>two</option>
-                  <option>three</option>
-                </select>
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Quantity
-                <input
-                  type="number"
-                  class="input"
-                  placeholder="Enter quantity"
-                />
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Unit Price
-                <input
-                  type="number"
-                  class="input"
-                  placeholder="Enter unit price"
-                />
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Total Amount
-                <input type="number" class="input" />
-              </label>
-            </div>
+          <div class="radio-group">
+            <label class="radio-option"
+              >Cash
+              <input type="radio" name="payment-method" />
+            </label>
+            <label class="radio-option"
+              >Mobile Money
+              <input type="radio" name="payment-method" />
+            </label>
+            <label class="radio-option"
+              >Bank Transfer
+              <input type="radio" name="payment-method" />
+            </label>
+            <label class="radio-option"
+              >Credit
+              <input type="radio" name="payment-method" />
+            </label>
+          </div>
 
-            <div class="radio-group">
-              <label class="radio-option"
-                >Cash
-                <input type="radio" name="payment-method" />
-              </label>
-              <label class="radio-option"
-                >Mobile Money
-                <input type="radio" name="payment-method" />
-              </label>
-              <label class="radio-option"
-                >Bank Transfer
-                <input type="radio" name="payment-method" />
-              </label>
-              <label class="radio-option"
-                >Credit
-                <input type="radio" name="payment-method" />
-              </label>
-            </div>
+          <div class="radio-group">
+            <label class="radio-option"
+              >Paid
+              <input type="radio" name="payment-status" />
+            </label>
+            <label class="radio-option"
+              >Pending
+              <input type="radio" name="payment-status" />
+            </label>
+            <label class="radio-option"
+              >Partial
+              <input type="radio" name="payment-status" />
+            </label>
+          </div>
 
-            <div class="radio-group">
-              <label class="radio-option"
-                >Paid
-                <input type="radio" name="payment-status" />
-              </label>
-              <label class="radio-option"
-                >Pending
-                <input type="radio" name="payment-status" />
-              </label>
-              <label class="radio-option"
-                >Partial
-                <input type="radio" name="payment-status" />
-              </label>
-            </div>
+          <div class="form-group">
+            <label
+              >Delivery Date
+              <input type="date" class="input" />
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Notes/Description
+              <textarea
+                class="textarea"
+                placeholder="Enter notes or description"
+              ></textarea>
+            </label>
+          </div>
+          <div class="form-group">
+            <label
+              >Receipt Upload
+              <input type="file" class="input" />
+            </label>
+          </div>
 
-            <div class="form-group">
-              <label
-                >Delivery Date
-                <input type="date" class="input" />
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Notes/Description
-                <textarea
-                  class="textarea"
-                  placeholder="Enter notes or description"
-                ></textarea>
-              </label>
-            </div>
-            <div class="form-group">
-              <label
-                >Receipt Upload
-                <input type="file" class="input" />
-              </label>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="btn-primary">Submit</button>
-              <button type="reset" class="btn-secondary">Reset</button>
-            </div>
-          </form>
-        </main>
-      </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Submit</button>
+            <button type="reset" class="btn-secondary">Reset</button>
+          </div>
+        </form>
+      </main>
     </div>
   </body>
 </html>
