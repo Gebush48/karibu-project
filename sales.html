@@ -3,23 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karibu - Sales</title>
+    <title>Karibu - Sales Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- css link -->
     <link rel="stylesheet" href="css/sales.css" />
   </head>
   <body>
     <div class="layout-container">
       <main class="content">
         <div class="form-header">
-          <p class="form-title">Sales Entry Form</p>
+          <h1 class="form-title">Enter Sale Details</h1>
         </div>
 
         <form class="sales-form">
+          <div class="section-header">
+            <h3 class="form-title-section"><em>Customer Info</em></h3>
+          </div>
           <div class="form-group">
             <label
               >Sale ID / Receipt Number
@@ -30,7 +54,7 @@
           <div class="form-group">
             <label
               >Sale Date & Time
-              <input type="text" class="input" />
+              <input type="datetime-local" class="input" />
             </label>
           </div>
 
@@ -60,7 +84,7 @@
             <label
               >Customer Email (Optional)
               <input
-                type="text"
+                type="email"
                 class="input"
                 placeholder="Enter customer email"
               />
@@ -70,16 +94,24 @@
           <div class="radio-group">
             <label class="radio-option"
               >Walk-in
-              <input type="radio" name="customer-type" />
+              <input type="radio" name="customer-type" value="walk-in" />
             </label>
             <label class="radio-option"
               >Regular
-              <input type="radio" name="customer-type" />
+              <input type="radio" name="customer-type" value="regular" />
             </label>
             <label class="radio-option"
               >Credit Customer
-              <input type="radio" name="customer-type" />
+              <input
+                type="radio"
+                name="customer-type"
+                value="credit-customer"
+              />
             </label>
+          </div>
+
+          <div class="section-header">
+            <h3 class="form-title-section"><em>Product Info</em></h3>
           </div>
 
           <div class="form-group">
@@ -89,6 +121,7 @@
                 type="text"
                 class="input"
                 placeholder="Enter product name"
+                required
               />
             </label>
           </div>
@@ -96,10 +129,13 @@
           <div class="form-group">
             <label
               >Product Category
-              <select class="select">
+              <select class="select" required>
                 <option>Select category</option>
-                <option>two</option>
-                <option>three</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Stationary">Stationary</option>
+                <option value="Groceries">Groceries</option>
+                <option value="Other">Other</option>
               </select>
             </label>
           </div>
@@ -107,61 +143,83 @@
           <div class="form-group">
             <label
               >Quantity Sold
-              <input type="text" class="input" placeholder="Enter quantity" />
+              <input
+                type="number"
+                class="input"
+                placeholder="Enter quantity"
+                required
+              />
             </label>
           </div>
 
           <div class="form-group">
             <label
               >Unit Price
-              <input type="text" class="input" placeholder="Enter unit price" />
+              <input
+                type="number"
+                class="input"
+                placeholder="Enter unit price"
+                min="0.00"
+                step="0.01"
+                required
+              />
             </label>
           </div>
 
           <div class="form-group">
             <label
               >Discount Percentage (Optional)
-              <input type="text" class="input" placeholder="Enter discount %" />
+              <input
+                type="number"
+                class="input"
+                placeholder="Enter discount %"
+                min="0"
+                max="100"
+              />
             </label>
           </div>
 
           <div class="form-group">
             <label
               >Subtotal
-              <input type="text" class="input" />
+              <input type="number" class="input" readonly />
             </label>
           </div>
 
           <div class="form-group">
             <label
               >Tax/VAT
-              <input type="text" class="input" />
+              <input type="number" class="input" readonly />
             </label>
           </div>
 
           <div class="form-group">
             <label
               >Total Amount
-              <input type="text" class="input" />
+              <input type="number" class="input" readonly />
             </label>
+          </div>
+
+          <div class="section-header">
+            <h3 class="form-title-section"><em>Payment Info</em></h3>
           </div>
 
           <div class="radio-group">
             <label class="radio-option"
               >Cash
-              <input type="radio" name="payment-method" />
+              <input type="radio" name="payment-method" value="cash" />
             </label>
             <label class="radio-option"
               >Mobile Money
-              <input type="radio" name="payment-method" />
+              <input type="radio" name="payment-method" value="mobile money" />
             </label>
             <label class="radio-option"
               >Card
-              <input type="radio" name="payment-method" />
+              <input type="radio" name="payment-method" value="card" />
             </label>
             <label class="radio-option"
               >Credit
-              <input type="radio" name="payment-method" />
+              <input type="radio" name="payment-method" value="credit" />
             </label>
           </div>
 
@@ -169,7 +227,7 @@
             <label
               >Amount Paid
               <input
-                type="text"
+                type="number"
                 class="input"
                 placeholder="Enter amount paid"
               />
@@ -179,7 +237,7 @@
           <div class="form-group">
             <label
               >Change/Balance
-              <input type="text" class="input" />
+              <input type="number" class="input" readonly />
             </label>
           </div>
 
@@ -190,6 +248,7 @@
                 type="text"
                 class="input"
                 placeholder="Enter sales person name"
+                required
               />
             </label>
           </div>

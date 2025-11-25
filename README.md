@@ -7,3 +7,4 @@ GROUP ELEVEN MEMBERS
 6. PANOM MICHAEL
 
 Text Formatter used - Prettier
+Generated favicon using favicon.io
