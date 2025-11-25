@@ -1,0 +1,219 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Layout container */
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 2.5rem;
+    max-width: 56.25rem;
+    margin: 0 auto;
+}
+
+/* Form Header */
+.form-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.025rem;
+}
+
+/* Form Container */
+.sales-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1 rem;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Input fields */
+.input,
+.select {
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.375rem;
+    font-size: 1rem; 
+    font-family: "Inter", sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fafafa;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.1);
+    background-color: #fff;
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+/* Select dropdown */
+.select {
+    cursor: pointer;
+    appearance: none;
+    padding-right: 1.875rem;
+}
+
+/* Textarea */
+.textarea {
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-family: "Inter", sans-serif;
+    resize: vertical;
+    min-height: 6.25rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fafafa;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.1);
+    background-color: #fff;
+}
+
+.textarea::placeholder {
+    color: #999;
+}
+
+/* Radio Groups */
+.radio-group {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #444;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    width: 1.125rem;
+    height: 1.125rem;
+    cursor: pointer;
+    accent-color: #007bff;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.875rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    flex: 1;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.btn-submit:active {
+    transform: translateY(0.0625rem);
+}
+
+.btn-reset {
+    background-color: #e9ecef;
+    color: #333;
+    flex: 1;
+}
+
+.btn-reset:hover {
+    background-color: #dee2e6;
+}
+
+.btn-reset:active {
+    transform: translateY(0.0625rem);
+}
+
+/* Responsive Design */
+@media (max-width: 48rem) {
+    .content {
+        padding: 1.25rem;
+    }
+
+    .sales-form {
+        padding: 1.25rem;
+    }
+
+    .form-title {
+        font-size: 1.5rem;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        width: 100%;
+    }
+}
