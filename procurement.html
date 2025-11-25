@@ -4,103 +4,158 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karibu - Procurement</title>
-    <link rel="stylesheet" href="css/procurement.css" />
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- css link -->
+    <link rel="stylesheet" href="css/procurement.css" />
   </head>
   <body>
     <div class="layout-container">
       <main class="content">
         <div class="form-header">
-          <p class="form-title">Procurement Entry Form</p>
+          <p class="form-title">Enter Procurement Details</p>
         </div>
 
         <form class="procurement-form">
-          <div class="form-group">
+          <div class="section-header">
+            <h3 class="form-title-section"><em>Supplier Info</em></h3>
+          </div>
+
+          <legend class="form-group">
             <label
               >Supplier Name
               <input
                 type="text"
                 class="input"
                 placeholder="Enter supplier name"
+                name="supplierName"
+                required
               />
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Supplier Contact
               <input
-                type="text"
+                type="tel"
                 class="input"
                 placeholder="Enter supplier contact"
+                name="supplierPhone"
+                required
               />
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Purchase Date
-              <input type="date" class="input" />
+              <input type="date" class="input" name="purchaseDate" required />
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Invoice Number
               <input
                 type="text"
                 class="input"
                 placeholder="Enter invoice number"
+                name="invoice"
+                required
               />
             </label>
+          </legend>
+
+          <div class="section-header">
+            <h3 class="form-title-section"><em>Product Info</em></h3>
           </div>
 
-          <div class="form-group">
+          <legend class="form-group">
             <label
               >Product Name
               <input
                 type="text"
                 class="input"
                 placeholder="Enter product name"
+                name="productName"
+                required
               />
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Product Category
-              <select class="select">
+              <select class="select" name="productCategory" required>
                 <option>Select category</option>
-                <option>two</option>
-                <option>three</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Furniture">Furniture</option>
+                <option value="Stationary">Stationary</option>
+                <option value="Groceries">Groceries</option>
+                <option value="Other">Other</option>
               </select>
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Quantity
-              <input type="number" class="input" placeholder="Enter quantity" />
+              <input
+                type="number"
+                class="input"
+                placeholder="Enter quantity"
+                name="quantity"
+                required
+              />
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Unit Price
               <input
                 type="number"
                 class="input"
                 placeholder="Enter unit price"
+                min="0.00"
+                step="0.01"
+                name="unitPrice"
+                required
               />
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Total Amount
-              <input type="number" class="input" />
+              <input type="number" class="input" name="totalAmount" readonly />
             </label>
+          </legend>
+
+          <div class="section-header">
+            <h3 class="form-title-section"><em>Payment Info</em></h3>
           </div>
 
-          <div class="radio-group">
+          <legend class="radio-group">
             <label class="radio-option"
               >Cash
               <input type="radio" name="payment-method" />
@@ -117,9 +172,9 @@
               >Credit
               <input type="radio" name="payment-method" />
             </label>
-          </div>
+          </legend>
 
-          <div class="radio-group">
+          <legend class="radio-group">
             <label class="radio-option"
               >Paid
               <input type="radio" name="payment-status" />
@@ -132,29 +187,30 @@
               >Partial
               <input type="radio" name="payment-status" />
             </label>
-          </div>
+          </legend>
 
-          <div class="form-group">
+          <legend class="form-group">
             <label
               >Delivery Date
-              <input type="date" class="input" />
+              <input type="date" class="input" name="deliveryDate" required />
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Notes/Description
               <textarea
                 class="textarea"
                 placeholder="Enter notes or description"
+                name="notes"
               ></textarea>
             </label>
-          </div>
-          <div class="form-group">
+          </legend>
+          <legend class="form-group">
             <label
               >Receipt Upload
-              <input type="file" class="input" />
+              <input type="file" class="input" name="receiptFile" required />
             </label>
-          </div>
+          </legend>
 
           <div class="form-actions">
             <button type="submit" class="btn-submit">Submit</button>

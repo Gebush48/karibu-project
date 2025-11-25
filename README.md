@@ -8,3 +8,4 @@ GROUP ELEVEN MEMBERS
 
 Text Formatter used - Prettier
 Generated favicon using favicon.io
+Picked color codes from colorhunt.io
