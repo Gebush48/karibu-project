@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Karibu - Sales</title>
+    <link rel="stylesheet" href="css/sales.css" />
+  </head>
+  <body>
+    <div class="app-root">
+      <div class="layout-container">
+        <main class="content">
+          <div class="form-header">
+            <p class="form-title">Sales Entry Form</p>
+          </div>
+
+          <form class="sales-form">
+            <div class="form-group">
+              <label
+                >Sale ID / Receipt Number
+                <input type="text" class="input" />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Sale Date & Time
+                <input type="text" class="input" />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Customer Name (Optional)
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter customer name"
+                />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Customer Phone (Optional)
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter customer phone"
+                />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Customer Email (Optional)
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter customer email"
+                />
+              </label>
+            </div>
+
+            <div class="radio-group">
+              <label class="radio-option"
+                >Walk-in
+                <input type="radio" name="customer-type" />
+              </label>
+              <label class="radio-option"
+                >Regular
+                <input type="radio" name="customer-type" />
+              </label>
+              <label class="radio-option"
+                >Credit Customer
+                <input type="radio" name="customer-type" />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Product/Item Name
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter product name"
+                />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Product Category
+                <select class="select">
+                  <option>Select category</option>
+                  <option>two</option>
+                  <option>three</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Quantity Sold
+                <input type="text" class="input" placeholder="Enter quantity" />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Unit Price
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter unit price"
+                />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Discount Percentage (Optional)
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter discount %"
+                />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Subtotal
+                <input type="text" class="input" />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Tax/VAT
+                <input type="text" class="input" />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Total Amount
+                <input type="text" class="input" />
+              </label>
+            </div>
+
+            <div class="radio-group">
+              <label class="radio-option"
+                >Cash
+                <input type="radio" name="payment-method" />
+              </label>
+              <label class="radio-option"
+                >Mobile Money
+                <input type="radio" name="payment-method" />
+              </label>
+              <label class="radio-option"
+                >Card
+                <input type="radio" name="payment-method" />
+              </label>
+              <label class="radio-option"
+                >Credit
+                <input type="radio" name="payment-method" />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Amount Paid
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter amount paid"
+                />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Change/Balance
+                <input type="text" class="input" />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Sales Person
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Enter sales person name"
+                />
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Additional Notes (Optional)
+                <textarea
+                  class="textarea"
+                  placeholder="Enter any additional notes"
+                ></textarea>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Submit Sale</button>
+              <button type="reset" class="btn-secondary">Clear Form</button>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
