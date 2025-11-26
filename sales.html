@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karibu - Sales Form</title>
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,25 +37,32 @@
   <body>
     <div class="layout-container">
       <main class="content">
+        <!-- main form heading -->
         <div class="form-header">
           <h1 class="form-title">Enter Sale Details</h1>
         </div>
 
         <form class="sales-form">
+          <!-- form sub headings -->
           <div class="section-header">
             <h3 class="form-title-section"><em>Customer Info</em></h3>
           </div>
           <div class="form-group">
             <label
               >Sale ID / Receipt Number
-              <input type="text" class="input" />
+              <input type="text" class="input" required name="receiptNumber" />
             </label>
           </div>
 
           <div class="form-group">
             <label
               >Sale Date & Time
-              <input type="datetime-local" class="input" />
+              <input
+                type="datetime-local"
+                class="input"
+                required
+                name="saleDateTime"
+              />
             </label>
           </div>
 
@@ -65,6 +73,7 @@
                 type="text"
                 class="input"
                 placeholder="Enter customer name"
+                name="customerName"
               />
             </label>
           </div>
@@ -76,6 +85,7 @@
                 type="text"
                 class="input"
                 placeholder="Enter customer phone"
+                name="customerPhone"
               />
             </label>
           </div>
@@ -87,6 +97,7 @@
                 type="email"
                 class="input"
                 placeholder="Enter customer email"
+                name="customerEmail"
               />
             </label>
           </div>
@@ -94,22 +105,19 @@
           <div class="radio-group">
             <label class="radio-option"
               >Walk-in
-              <input type="radio" name="customer-type" value="walk-in" />
+              <input type="radio" name="customerType" value="walk-in" />
             </label>
             <label class="radio-option"
               >Regular
-              <input type="radio" name="customer-type" value="regular" />
+              <input type="radio" name="customerType" value="regular" />
             </label>
             <label class="radio-option"
               >Credit Customer
-              <input
-                type="radio"
-                name="customer-type"
-                value="credit-customer"
-              />
+              <input type="radio" name="customerType" value="credit-customer" />
             </label>
           </div>
 
+          <!-- form sub headings -->
           <div class="section-header">
             <h3 class="form-title-section"><em>Product Info</em></h3>
           </div>
@@ -121,6 +129,7 @@
                 type="text"
                 class="input"
                 placeholder="Enter product name"
+                name="productItem"
                 required
               />
             </label>
@@ -131,11 +140,19 @@
               >Product Category
               <select class="select" required>
                 <option>Select category</option>
-                <option value="Electronics">Electronics</option>
-                <option value="Furniture">Furniture</option>
-                <option value="Stationary">Stationary</option>
-                <option value="Groceries">Groceries</option>
-                <option value="Other">Other</option>
+                <option value="Electronics" name="productCategory">
+                  Electronics
+                </option>
+                <option value="Furniture" name="productCategory">
+                  Furniture
+                </option>
+                <option value="Stationary" name="productCategory">
+                  Stationary
+                </option>
+                <option value="Groceries" name="productCategory">
+                  Groceries
+                </option>
+                <option value="Other" name="productCategory">Other</option>
               </select>
             </label>
           </div>
@@ -148,6 +165,7 @@
                 class="input"
                 placeholder="Enter quantity"
                 required
+                name="quantitySold"
               />
             </label>
           </div>
@@ -162,6 +180,7 @@
                 min="0.00"
                 step="0.01"
                 required
+                name="unitPrice"
               />
             </label>
           </div>
@@ -175,6 +194,7 @@
                 placeholder="Enter discount %"
                 min="0"
                 max="100"
+                name="discount"
               />
             </label>
           </div>
@@ -182,24 +202,25 @@
           <div class="form-group">
             <label
               >Subtotal
-              <input type="number" class="input" readonly />
+              <input type="number" class="input" readonly name="subtotal" />
             </label>
           </div>
 
           <div class="form-group">
             <label
               >Tax/VAT
-              <input type="number" class="input" readonly />
+              <input type="number" class="input" readonly name="subtotal" />
             </label>
           </div>
 
           <div class="form-group">
             <label
               >Total Amount
-              <input type="number" class="input" readonly />
+              <input type="number" class="input" readonly name="totalAmount" />
             </label>
           </div>
 
+          <!-- form sub headings -->
           <div class="section-header">
             <h3 class="form-title-section"><em>Payment Info</em></h3>
           </div>
@@ -207,19 +228,19 @@
           <div class="radio-group">
             <label class="radio-option"
               >Cash
-              <input type="radio" name="payment-method" value="cash" />
+              <input type="radio" name="paymentMethod" value="cash" />
             </label>
             <label class="radio-option"
               >Mobile Money
-              <input type="radio" name="payment-method" value="mobile money" />
+              <input type="radio" name="paymentMethod" value="mobile money" />
             </label>
             <label class="radio-option"
               >Card
-              <input type="radio" name="payment-method" value="card" />
+              <input type="radio" name="paymentMethod" value="card" />
             </label>
             <label class="radio-option"
               >Credit
-              <input type="radio" name="payment-method" value="credit" />
+              <input type="radio" name="paymentMethod" value="credit" />
             </label>
           </div>
 
@@ -230,6 +251,8 @@
                 type="number"
                 class="input"
                 placeholder="Enter amount paid"
+                required
+                name="amountPaid"
               />
             </label>
           </div>
@@ -237,7 +260,7 @@
           <div class="form-group">
             <label
               >Change/Balance
-              <input type="number" class="input" readonly />
+              <input type="number" class="input" readonly name="balance" />
             </label>
           </div>
 
@@ -249,6 +272,7 @@
                 class="input"
                 placeholder="Enter sales person name"
                 required
+                name="salesPerson"
               />
             </label>
           </div>
@@ -259,10 +283,12 @@
               <textarea
                 class="textarea"
                 placeholder="Enter any additional notes"
+                name="additionalNotes"
               ></textarea>
             </label>
           </div>
 
+          <!-- action buttons -->
           <div class="form-actions">
             <button type="submit" class="btn-submit">Submit Sale</button>
             <button type="reset" class="btn-reset">Clear Form</button>
